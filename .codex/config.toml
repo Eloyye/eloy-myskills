@@ -1,0 +1,11 @@
+# Project-local Codex policy.
+# Loaded only when this project is trusted.
+
+sandbox_mode = "workspace-write"
+approval_policy = { granular = { sandbox_approval = true, rules = true, request_permissions = true, mcp_elicitations = true, skill_approval = true } }
+
+[sandbox_workspace_write]
+# Keep the writable sandbox scoped to the project instead of inheriting the
+# usual temporary directories.
+exclude_slash_tmp = true
+exclude_tmpdir_env_var = true

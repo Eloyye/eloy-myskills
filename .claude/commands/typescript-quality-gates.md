@@ -1,0 +1,1 @@
+../../skills/typescript-quality-gates/SKILL.md

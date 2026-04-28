@@ -1,0 +1,7 @@
+interface:
+  display_name: "TypeScript Quality Gates"
+  short_description: "Require TS tests, types, lint, format, and docstrings."
+  default_prompt: "Use $typescript-quality-gates when building or modifying a TypeScript project; ensure concise JSDoc/TSDoc docstrings for public APIs."
+
+policy:
+  allow_implicit_invocation: true

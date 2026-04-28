@@ -1,0 +1,7 @@
+interface:
+  display_name: "Aggressive Refactoring"
+  short_description: "Drive cleanup, dedupe, and API modernization."
+  default_prompt: "Use $aggressive-refactoring to aggressively simplify this code, remove repetition, replace deprecated APIs, and delete stale structure safely."
+
+policy:
+  allow_implicit_invocation: true

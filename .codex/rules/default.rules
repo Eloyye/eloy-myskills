@@ -1,0 +1,69 @@
+# Require approval for recursive deletion commands that go through execpolicy.
+
+prefix_rule(
+    pattern = ["rm", "-r"],
+    decision = "prompt",
+    justification = "Recursive deletion should always require approval.",
+    match = [
+        "rm -r build",
+        "rm -r ./tmp",
+    ],
+    not_match = [
+        "rm file.txt",
+        "rmdir empty-dir",
+    ],
+)
+
+prefix_rule(
+    pattern = ["rm", "-rf"],
+    decision = "prompt",
+    justification = "Recursive deletion should always require approval.",
+    match = [
+        "rm -rf build",
+        "rm -rf ./tmp",
+    ],
+    not_match = [
+        "rm -f file.txt",
+        "rm file.txt",
+    ],
+)
+
+prefix_rule(
+    pattern = ["rm", "-fr"],
+    decision = "prompt",
+    justification = "Recursive deletion should always require approval.",
+    match = [
+        "rm -fr build",
+        "rm -fr ./tmp",
+    ],
+    not_match = [
+        "rm -f file.txt",
+        "rm file.txt",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "origin", "main"],
+    decision = "forbidden",
+    justification = "Do not push directly to main from Codex. Push a feature branch and open a PR instead.",
+    match = [
+        "git push origin main",
+    ],
+    not_match = [
+        "git push origin feature/my-branch",
+        "git push upstream main",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "push", "main"],
+    decision = "forbidden",
+    justification = "Do not push directly to main from Codex. Push a feature branch and open a PR instead.",
+    match = [
+        "git push main",
+    ],
+    not_match = [
+        "git push feature/my-branch",
+        "git push origin main",
+    ],
+)

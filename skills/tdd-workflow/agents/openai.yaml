@@ -1,0 +1,7 @@
+interface:
+  display_name: "TDD Workflow"
+  short_description: "Strict TDD loop with repo checks"
+  default_prompt: "Use $tdd-workflow to implement this change with failing tests first, minimal code changes, and final repo validation."
+
+policy:
+  allow_implicit_invocation: true

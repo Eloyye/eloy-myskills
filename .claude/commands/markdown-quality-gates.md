@@ -1,0 +1,1 @@
+../../skills/markdown-quality-gates/SKILL.md

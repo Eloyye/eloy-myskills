@@ -1,0 +1,7 @@
+interface:
+  display_name: "Markdown Quality Gates"
+  short_description: "Require repo-root Prettier after Markdown edits."
+  default_prompt: "Use $markdown-quality-gates when adding or modifying Markdown files; run `pnpm run format` from the repository root before finishing."
+
+policy:
+  allow_implicit_invocation: true

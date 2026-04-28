@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+bun.lockb
+
+# Bun
+.bun/
+bun-error.html
+
+# TypeScript
+*.tsbuildinfo
+dist/
+out/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
